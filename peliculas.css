@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Marvel&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+    height: 100vh;
+    background-color: #202020;
+    font-family: 'Marvel', sans-serif;
+}
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 0 5%;
+	height: 100px;
+	background-color: #202020;
+    
+}
+
+nav img{
+    height: 70px;
+    width: 200px;
+}
+
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+}
+
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+#desplegable {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: start;
+		background-color: #202020;
+        opacity: .9;
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+        color: #fff;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+
+.titulo{
+    text-align: center;
+    color: red;
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta-pelicula{
+    background: #fff;
+    width: 800px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: justify;
+}
+
+.texto-peliculas{
+    margin: 25px;
+}
+
+.tarjeta h2{
+    padding: 10px;
+}
+
+.tarjeta p{
+    padding: 10px;
+}
+
+.tarjeta a{
+    background-color: red;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.imagen-tarjeta{
+    height: 500px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+}
+
+.pelicula1{
+    background-image: url(https://i.ytimg.com/vi/dI2ADfiMjXI/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pelicula2{
+    background-image: url(https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FD158910A3145096BA7285F42B187ABE60AD98951D0A7B986A171212F46F8EDA/scale?width=1200&aspectRatio=1.78&format=jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pelicula3{
+    background-image: url(https://cinefilosfrustrados.com/wp-content/uploads/2017/07/Thor-Ragnarok.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pelicula4{
+    background-image: url(https://www.lascosasquenoshacenfelices.com/wp-content/uploads/2022/07/2-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+footer{
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+}
+

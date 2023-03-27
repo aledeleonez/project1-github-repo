@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <nav>
+        <input id="desplegable" type="checkbox">
+        <div class="logo"><img src="./img/logoThor.png" alt="logo" href="/index.html"></div>
+        <ul class="links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/personajes.html">Personajes</a></li>
+            <li><a href="/peliculas.html">Peliculas</a></li>
+            <li><a href="/contacto.html">Contacto</a></li>
+        </ul>
+        <label for="desplegable" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <div>
+        <h1>Formulario de contacto</h1>
+    </div>
+    <div class="formulario">
+        <form action="/submit-form" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required rows="4" cols="33"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>          
+    </div>  
+    <footer>
+        <h3>Web de información sobre las peliculas de Thor en el UCM</h3>
+        <p>Diseño por Alejandro de León Fernández 2023</p>
+    </footer> 
+</body>
+</html>
